@@ -84,83 +84,107 @@
         <h2 style="margin: 12px 0; font-size: 1.1rem; border-left: 3px solid #ffcc00; padding-left: 8px;">Biblioteca de Jogos</h2>
 
         <div class="game-grid">
-            <!-- Jogo 1 -->
+            <!-- Aladdin -->
             <div class="game-card">
                 <div class="game-info">
                     <h3>Aladdin (Europe)</h3>
-                    <button class="play-btn" onclick="iniciarJogo(['Aladdin (Europe).md', 'Aladdin (Europe).bin', 'aladdin.md'])">Jogar</button>
+                    <button class="play-btn" onclick="iniciarJogo('Aladdin (Europe).md')">Jogar</button>
                 </div>
             </div>
 
-            <!-- Jogo 2 - Com tentativas múltiplas para evitar erro de rede -->
+            <!-- Dragon Ball Z -->
             <div class="game-card">
                 <div class="game-info">
                     <h3>Dragon Ball Z</h3>
-                    <button class="play-btn" onclick="iniciarJogo(['Dragon Ball Z - Buyuu Retsuden (Japan).md', 'Dragon Ball Z.md', 'Dragon Ball Z.bin', 'dragon-ball.md'])">Jogar</button>
+                    <button class="play-btn" onclick="iniciarJogo('Dragon Ball Z -.md')">Jogar</button>
                 </div>
             </div>
 
-            <!-- Jogo 3 -->
+            <!-- Earthworm Jim -->
+            <div class="game-card">
+                <div class="game-info">
+                    <h3>Earthworm Jim</h3>
+                    <button class="play-btn" onclick="iniciarJogo('Earthworm Jim.md')">Jogar</button>
+                </div>
+            </div>
+
+            <!-- Mega Bomberman -->
             <div class="game-card">
                 <div class="game-info">
                     <h3>Mega Bomberman</h3>
-                    <button class="play-btn" onclick="iniciarJogo(['Mega Bomberman.bin', 'Mega Bomberman.md', 'mega-bomberman.bin'])">Jogar</button>
+                    <button class="play-btn" onclick="iniciarJogo('Mega Bomberman.bin')">Jogar</button>
                 </div>
             </div>
 
-            <!-- Jogo 4 -->
+            <!-- Mortal Kombat 2 -->
             <div class="game-card">
                 <div class="game-info">
                     <h3>Mortal Kombat 2</h3>
-                    <button class="play-btn" onclick="iniciarJogo(['Mortal Kombat 2.bin', 'Mortal Kombat II.bin', 'mortal-kombat-2.bin'])">Jogar</button>
+                    <button class="play-btn" onclick="iniciarJogo('Mortal Kombat 2.bin')">Jogar</button>
                 </div>
             </div>
 
-            <!-- Jogo 5 -->
+            <!-- Spider-Man -->
+            <div class="game-card">
+                <div class="game-info">
+                    <h3>Spider-Man</h3>
+                    <button class="play-btn" onclick="iniciarJogo('Spider-Man.md')">Jogar</button>
+                </div>
+            </div>
+
+            <!-- Streets of Rage -->
             <div class="game-card">
                 <div class="game-info">
                     <h3>Streets of Rage</h3>
-                    <button class="play-btn" onclick="iniciarJogo(['Streets of Rage.bin', 'Streets of Rage.md', 'streets-of-rage.bin'])">Jogar</button>
+                    <button class="play-btn" onclick="iniciarJogo('Streets of Rage.bin')">Jogar</button>
                 </div>
             </div>
 
-            <!-- Jogo 6 - Com tentativas múltiplas para o Tiny Toon -->
+            <!-- Tiny Toon Adventures -->
             <div class="game-card">
                 <div class="game-info">
                     <h3>Tiny Toon Adventures</h3>
-                    <button class="play-btn" onclick="iniciarJogo(['Tiny Toon Adventures - Buster\'s Hidden Treasure.bin', 'Tiny Toon Adventures.bin', 'tiny-toon.bin'])">Jogar</button>
+                    <button class="play-btn" onclick="iniciarJogo('Tiny Toon Adventures -.md')">Jogar</button>
                 </div>
             </div>
 
-            <!-- Jogo 7 -->
+            <!-- Top Gear 2 -->
             <div class="game-card">
                 <div class="game-info">
                     <h3>Top Gear 2</h3>
-                    <button class="play-btn" onclick="iniciarJogo(['Top Gear 2.bin', 'Top Gear 2.md', 'top-gear-2.bin'])">Jogar</button>
+                    <button class="play-btn" onclick="iniciarJogo('Top Gear 2.bin')">Jogar</button>
                 </div>
             </div>
 
-            <!-- Jogo 8 -->
+            <!-- Toy Story -->
+            <div class="game-card">
+                <div class="game-info">
+                    <h3>Toy Story</h3>
+                    <button class="play-btn" onclick="iniciarJogo('Toy Story.bin')">Jogar</button>
+                </div>
+            </div>
+
+            <!-- Futebol -->
             <div class="game-card">
                 <div class="game-info">
                     <h3>Futebol</h3>
-                    <button class="play-btn" onclick="iniciarJogo(['futebol.bin', 'Futebol.bin', 'soccer.bin'])">Jogar</button>
+                    <button class="play-btn" onclick="iniciarJogo('futebol.bin')">Jogar</button>
                 </div>
             </div>
 
-            <!-- Jogo 9 -->
+            <!-- Sonic -->
             <div class="game-card">
                 <div class="game-info">
                     <h3>Sonic</h3>
-                    <button class="play-btn" onclick="iniciarJogo(['sonic.md', 'Sonic.md', 'Sonic.bin', 'sonic-the-hedgehog.md'])">Jogar</button>
+                    <button class="play-btn" onclick="iniciarJogo('sonic.md')">Jogar</button>
                 </div>
             </div>
 
-            <!-- Jogo 10 -->
+            <!-- Street Fighter -->
             <div class="game-card">
                 <div class="game-info">
                     <h3>Street Fighter</h3>
-                    <button class="play-btn" onclick="iniciarJogo(['street-fighter.md', 'Street Fighter.md', 'Street Fighter II.bin', 'sf2.md'])">Jogar</button>
+                    <button class="play-btn" onclick="iniciarJogo('street-fighter.md')">Jogar</button>
                 </div>
             </div>
         </div>
@@ -175,36 +199,17 @@
     </footer>
 
     <script>
-        async function testarUrl(url) {
-            try {
-                let response = await fetch(url, { method: 'HEAD' });
-                return response.ok;
-            } catch (e) {
-                return false;
-            }
-        }
-
-        async function iniciarJogo(listaRoms) {
+        function iniciarJogo(nomeRom) {
             const container = document.getElementById('emulator-container');
             const emulatorDiv = document.getElementById('emulator');
             
             container.style.display = 'block';
             container.scrollIntoView({ behavior: 'smooth' });
 
-            let romSelecionada = listaRoms[0];
-            
-            // Tenta encontrar qual dos nomes exatos existe no GitHub
-            for (let rom of listaRoms) {
-                if (await testarUrl(rom)) {
-                    romSelecionada = rom;
-                    break;
-                }
-            }
-
             emulatorDiv.innerHTML = '';
 
             window.EJS_player = '#emulator';
-            window.EJS_gameUrl = romSelecionada;
+            window.EJS_gameUrl = nomeRom;
             window.EJS_core = 'segaMD';
             window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
 
