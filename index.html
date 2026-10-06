@@ -1,63 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogar Sonic Classics Online</title>
-    <style>
-        body {
-            background-color: #111;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 10px;
-        }
-        .ad-container {
-            margin: 15px auto;
-            max-width: 728px;
-            min-height: 90px;
-            background-color: #222;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px dashed #444;
-        }
-        #game-box {
-            width: 100%;
-            max-width: 800px;
-            height: 500px;
-            margin: 0 auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Jogos Retrô</title>
+  <style>
+    body { background-color: #111; color: #fff; font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 10px; }
+    .menu-jogos { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; }
+    .btn-jogo { background-color: #ff4757; color: white; border: none; padding: 10px 15px; font-size: 0.9rem; font-weight: bold; border-radius: 8px; cursor: pointer; }
+    #game-box { width: 100%; max-width: 800px; height: 500px; margin: 0 auto; border: 2px solid #333; border-radius: 8px; overflow: hidden; background-color: #000; }
+  </style>
 </head>
 <body>
 
-    <h1>Sonic Classics (Mega Drive)</h1>
+  <h1>🎮 Meus Jogos Retrô</h1>
 
-    <!-- ESPAÇO PARA ANÚNCIO DO TOPO -->
-    <div class="ad-container">
-        <!-- COLE O CÓDIGO DE ANÚNCIO 1 AQUI -->
-    </div>
+  <div class="menu-jogos">
+    <button class="btn-jogo" onclick="carregarJogo('segaMD', 'sonic.md')">🔵 Sonic Classics</button>
+    <button class="btn-jogo" onclick="carregarJogo('segaMD', 'futebol.bin')">⚽ ISS Deluxe</button>
+    <button class="btn-jogo" onclick="carregarJogo('segaMD', 'street-fighter.md')">🥊 Street Fighter II</button>
+  </div>
 
-    <!-- TELA DO JOGO (EMULATORJS) -->
-    <div id="game-box">
-        <div id="game"></div>
-    </div>
+  <div id="game-box">
+    <div id="game"></div>
+  </div>
 
-    <!-- ESPAÇO PARA ANÚNCIO INFERIOR -->
-    <div class="ad-container">
-        <!-- COLE O CÓDIGO DE ANÚNCIO 2 AQUI -->
-    </div>
+  <script type="text/javascript">
+    function carregarJogo(sistema, rom) {
+      document.getElementById('game').innerHTML = '';
+      EJS_player = '#game';
+      EJS_core = sistema;
+      EJS_gameUrl = rom;
+      EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+      
+      const oldScript = document.getElementById('ejs-script');
+      if (oldScript) oldScript.remove();
 
-    <!-- CONFIGURAÇÃO DO EMULADOR -->
-    <script type="text/javascript">
-        EJS_player = '#game';
-        EJS_core = 'segaMD';
-        EJS_gameUrl = 'roms/sonic-classics.bin';
-        EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
-    </script>
-    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+      const script = document.createElement('script');
+      script.id = 'ejs-script';
+      script.src = 'https://cdn.emulatorjs.org/stable/data/loader.js';
+      document.body.appendChild(script);
+    }
 
+    // Carrega o Sonic por defeito ao abrir
+    carregarJogo('segaMD', 'sonic.md');
+  </script>
 </body>
 </html>
