@@ -8,7 +8,6 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #121212; color: #ffffff; display: flex; flex-direction: column; min-height: 100vh; }
         
-        /* Cabeçalho vermelho com estilo arcade retro */
         header { 
             background: linear-gradient(135deg, #b30000, #ff1a1a); 
             padding: 22px 15px; 
@@ -37,7 +36,6 @@
 
         .container { max-width: 1200px; margin: 15px auto; padding: 0 12px; flex: 1; width: 100%; }
         
-        /* Grelha de 2 colunas com quadrados dos jogos bem maiores */
         .game-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
         
         .game-card { 
@@ -50,7 +48,7 @@
             justify-content: space-between; 
             border: 1px solid #444; 
             padding: 20px 16px; 
-            min-height: 145px; /* Quadrados mais altos e espaçosos */
+            min-height: 145px; 
         }
         .game-card:hover { border-color: #ffcc00; }
         
@@ -97,7 +95,7 @@
             <div class="game-card">
                 <div class="game-info">
                     <h3>Dragon Ball Z</h3>
-                    <button class="play-btn" onclick="iniciarJogo('Dragon Ball Z - Buyuu Retsuden (....md')">Jogar</button>
+                    <button class="play-btn" onclick="iniciarJogo('Dragon Ball Z - Buyuu Retsuden (Japan).md')">Jogar</button>
                 </div>
             </div>
 
@@ -129,7 +127,7 @@
             <div class="game-card">
                 <div class="game-info">
                     <h3>Tiny Toon Adventures</h3>
-                    <button class="play-btn" onclick="iniciarJogo('Tiny Toon Adventures - Buster\'s ....bin')">Jogar</button>
+                    <button class="play-btn" onclick="iniciarJogo('Tiny Toon Adventures - Buster\'s Hidden Treasure.bin')">Jogar</button>
                 </div>
             </div>
 
